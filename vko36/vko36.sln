@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vko36", "vko36\vko36.vcxproj", "{C7DDEC44-DA06-4587-AE7E-CE96335D7BF7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Teht1", "vko36\vko36.vcxproj", "{C7DDEC44-DA06-4587-AE7E-CE96335D7BF7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Teht2", "Teht2\Teht2.vcxproj", "{A7F10E66-20EE-40CA-8A16-373942B58E17}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Teht3", "Teht3\Teht3.vcxproj", "{ACF41ABF-9EAA-475E-9396-EED0E36A380A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{A7F10E66-20EE-40CA-8A16-373942B58E17}.Release|x64.Build.0 = Release|x64
 		{A7F10E66-20EE-40CA-8A16-373942B58E17}.Release|x86.ActiveCfg = Release|Win32
 		{A7F10E66-20EE-40CA-8A16-373942B58E17}.Release|x86.Build.0 = Release|Win32
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Debug|x64.ActiveCfg = Debug|x64
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Debug|x64.Build.0 = Debug|x64
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Debug|x86.ActiveCfg = Debug|Win32
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Debug|x86.Build.0 = Debug|Win32
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Release|x64.ActiveCfg = Release|x64
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Release|x64.Build.0 = Release|x64
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Release|x86.ActiveCfg = Release|Win32
+		{ACF41ABF-9EAA-475E-9396-EED0E36A380A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
