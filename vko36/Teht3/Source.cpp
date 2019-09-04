@@ -23,7 +23,7 @@ int main() {
 	cout << "Arvosana Lkm Histogrammi" << endl;
 
 	for (int i = 0; i < 6; i++) {
-
+		 
 		cout << i << " " << kaikkiarvosanat[i] << " ";
 
 		for (int j = 0; j < kaikkiarvosanat[i]; j++) {
