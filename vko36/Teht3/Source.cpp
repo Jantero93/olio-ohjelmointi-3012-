@@ -16,7 +16,7 @@ int main() {
 		if (arvosana >= 0 && arvosana <= 5) {
 			kaikkiarvosanat[arvosana]++;
 		}
-
+		 
 	} while (arvosana >= 0);
 	
 	//Tulostus
