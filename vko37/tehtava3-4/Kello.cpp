@@ -1,5 +1,20 @@
 #include "Kello.h";
 
+Kello::Kello(): sec_(0), min_(0), hour_(0)
+{
+	std::cout << "Oletus rakentaja " << this << std::endl;
+}
+
+Kello::Kello(int sec, int min, int hour) : sec_(sec), min_(min), hour_(hour)
+{
+	std::cout << "Parametri rakentaja " << this << std::endl;
+}
+
+Kello::~Kello()
+{
+	std::cout << "Purkaja " << this << std::endl;
+}
+
 int Kello::annaSec() {
 	return sec_;
 }

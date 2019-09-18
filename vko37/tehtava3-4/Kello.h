@@ -3,6 +3,14 @@
 
 class Kello {
 public:
+
+	//oletus
+	Kello();
+	//parametri rakentaja
+	Kello(int sec, int min, int hour);
+	//purkaja
+	~Kello();
+
 	//getter
 	int annaSec();
 	int annaMin();
