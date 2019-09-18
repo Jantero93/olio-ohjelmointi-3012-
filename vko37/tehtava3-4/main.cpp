@@ -10,7 +10,7 @@ int main() {
 	opettajan.kysyAika();
 	opettajan.tulostaAika();
 
-	for (int i = 0; i < 9999; i++) {
+	for (int i = 0; i < 300; i++) {
 		opettajan.lisaaSekuntti();
 		opettajan.tulostaAika();
 	}

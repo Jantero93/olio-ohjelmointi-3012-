@@ -17,6 +17,7 @@ void Kello::asetaSec(int sec) {
 
 	if (sec_ == 60) {
 		sec_ = 0;
+
 		min_++;
 		//
 		Kello::asetaMin(min_);
