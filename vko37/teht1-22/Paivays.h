@@ -18,10 +18,14 @@ public:
 	void asetaKuukausi(int kk);
 	void asetaVuosi(int vv);
 
+	//extra metodit
+	void lisaaPaiva();
 	void tulostaPaivays();
+	void montakoPaivaaKuukaudessa();
 
 private:
 	int pp_;
 	int kk_;
 	int vv_;
+	bool karkausvuosi_(int vv_);
 };
