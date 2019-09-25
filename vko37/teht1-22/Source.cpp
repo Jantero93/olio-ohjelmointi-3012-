@@ -2,8 +2,9 @@
 
 
 int main() {
-	Paivays tanaan;
-	Paivays huomenna(6, 6, 1999);
+	Paivays tanaan; //
+//	Paivays huomenna(6, 6, 1999);// parametrinen
+	Paivays huomenna(tanaan); //kopio
 
 	//tänään
 	//tanaan.asetaPaiva(11);
@@ -18,9 +19,10 @@ int main() {
 	//huomenna.asetaVuosi(2019);
 	
 	std::cout << "Tanaan on paiva: " << tanaan.annaKuukausi() << "/" << tanaan.annaPaiva() << "/" << tanaan.annaVuosi() << std::endl;
-	std::cout << "Huomenna on paiva: " << huomenna.annaKuukausi() << "/" << huomenna.annaPaiva() << "/" << huomenna.annaVuosi() << std::endl;
+	std::cout << "(kopiokone) on paiva: " << huomenna.annaKuukausi() << "/" << huomenna.annaPaiva() << "/" << huomenna.annaVuosi() << std::endl;
 
 	
-	//system("pause");
+	
 	return 0;
+	
 }

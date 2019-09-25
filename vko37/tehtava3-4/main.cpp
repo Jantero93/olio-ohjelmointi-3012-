@@ -3,6 +3,7 @@
 int main() {
 	Kello opettajan(12, 55, 12);
 	Kello casio;
+	Kello kopio(casio);
 
 	using std::cout; using std::endl;
 	/*
@@ -24,6 +25,8 @@ int main() {
 	cout << "Casion aika " << endl;
 	casio.tulostaAika();
 
+	cout << "kopion aika " << endl;
+	kopio.tulostaAika();
 	
 
 

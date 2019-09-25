@@ -51,3 +51,25 @@ void Paivays::asetaVuosi(int vv) {
 void Paivays::tulostaPaivays() {
 	cout << pp_ << "." << kk_ << "." << vv_ << endl;
 }
+
+void Paivays::kysyPaivays()
+{
+	using std::cout;
+	using std::endl;
+	using std::cin;
+	int pp;
+	int kk;
+	int vv;
+
+	cout << "Anna monesko paiva: ";
+	cin >> pp;
+	cout << "Anna monesko kuukausi: ";
+	cin >> kk;
+	cout << "Anna monesko vuosi: ";
+	cin >> vv;
+
+	Paivays::asetaPaiva(pp);
+	Paivays::asetaKuukausi(kk);
+	Paivays::asetaVuosi(vv);
+
+}
