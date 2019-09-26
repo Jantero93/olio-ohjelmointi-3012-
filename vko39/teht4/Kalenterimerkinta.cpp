@@ -64,12 +64,14 @@ void Kalenterimerkinta::asetaMuistutus(bool muistutus)
 
 void Kalenterimerkinta::tulosta()
 {
+	string asia;
 	std::cout << "Paivays on: ";
 	pvm_.tulostaPaivays(); 
 	std::cout << "Kellonaika on: ";
 	klo_.tulostaAika();
 	std::cout << "Asia/Aihe: ";
-	annaAsia();
+	asia = annaAsia();
+	std::cout << asia << std::endl;
 	std::cout << "Muistutus: ";
 
 	if (annaMuistutus() == true) {

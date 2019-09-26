@@ -25,6 +25,11 @@ int main() {
 	std::cout << "montako paivaa kuukaudessa" << std::endl << std::endl;
 
 	mikakuukausi.montakoPaivaaKuukaudessa();
+
+	for (int i = 0; i < 2000; i++) {
+		huomenna.lisaaPaiva();
+		huomenna.tulostaPaivays();
+	}
 	
 	
 	system("pause");
