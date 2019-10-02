@@ -1,7 +1,7 @@
 #include "Kalenterimerkinta.h";
 int main() {
 	Kalenterimerkinta esimerkki;
-	esimerkki.kysyTiedot();
+//	esimerkki.kysyTiedot();
 	
 	std::cout << std::endl << "TULOSTA KYSYTYT" << std::endl;
 
@@ -14,7 +14,10 @@ int main() {
 	std::cout << "parametrinen rakentaja testaus" << std::endl;
 	parametrinen.tulosta();
 
-	
+	std::cout << std::endl << std::endl;
+	printf("Kysely\n");
+	esimerkki.kysyTiedot();
+	esimerkki.tulosta();
 
 	system("pause");
 	return 0;
