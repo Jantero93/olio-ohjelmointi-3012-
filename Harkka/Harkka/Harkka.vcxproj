@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Henkilo.h" />
+    <ClInclude Include="Koulu.h" />
     <ClInclude Include="Koulutusohjelma.h" />
     <ClInclude Include="Opettaja.h" />
     <ClInclude Include="Opiskelija.h" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Henkilo.cpp" />
+    <ClCompile Include="Koulu.cpp" />
     <ClCompile Include="Koulutusohjelma.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Opettaja.cpp" />

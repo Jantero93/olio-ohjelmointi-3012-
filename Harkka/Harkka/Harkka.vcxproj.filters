@@ -30,6 +30,9 @@
     <ClInclude Include="Koulutusohjelma.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Koulu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Henkilo.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Koulutusohjelma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Koulu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

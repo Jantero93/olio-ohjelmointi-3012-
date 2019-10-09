@@ -1,19 +1,38 @@
-#include "Koulutusohjelma.h";
+//#include "Koulutusohjelma.h";
+#include "Koulu.h"
+#include <iostream>
+
 
 
 int main() {
 
-	Koulutusohjelma tite("TiTe");
-	tite.lisaaOpettaja();
-	tite.lisaaOpettaja();
-	tite.lisaaOpiskelija();
-	tite.lisaaOpiskelija();
+	using std::cout;
+	using std::endl;
+	using std::endl;
 
-	tite.tulostaOpettajat();
-	tite.tulostaOpiskelija(); 
+	Koulutusohjelma tite("TiTe");
+	Koulutusohjelma raksa("Rakennus");
+	//tite.lisaaOpettaja();
+	//tite.lisaaOpettaja();
+	//tite.lisaaOpiskelija();
+	//tite.lisaaOpiskelija();
+
+	//tite.tulostaOpettajat();
+	//tite.tulostaOpiskelija(); 
+
+
+	Koulu tamk;
+	
+	tamk.lisaaKoulutusOhjelmaanOpiskelija();
+	tamk.lisaaKoulutusOhjelmaanOpiskelija();
+	tamk.lisaaKoulutusOhjelmaanOpiskelija();
+
+	tamk.tulostaKoulutusOhjelmat();
+
+	tamk.tulostaKoulutusOhjelmienMaara();
 
 	
 
-		system("pause");
+	system("pause");
 	return 0;
 }
