@@ -37,7 +37,7 @@ void Tyontekija::asetaPalkka(string & palkka)
 
 void Tyontekija::asetaTunnus(string & tunnus)
 {
-	tunnus_ = tunnus;
+	tunnus_ = tunnus; 
 }
 
 void Tyontekija::kysyTiedot()
