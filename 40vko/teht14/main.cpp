@@ -7,6 +7,7 @@ int main() {
 	Henkilo henk1();
 	Henkilo henk2("Jukka", "Keijonen", "Aku ankka tie", "313");
 	Henkilo henk3(henk2);
+	
 
 	Opiskelija op();
 	Opiskelija op1("Pentti", "Ahvenisto", "jokutie", "04012344667", "333222111");
