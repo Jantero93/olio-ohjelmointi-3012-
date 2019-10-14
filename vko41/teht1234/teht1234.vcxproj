@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{C717707C-1741-411F-BE82-E5962FB33F9E}</ProjectGuid>
-    <RootNamespace>teht12</RootNamespace>
+    <ProjectGuid>{18ED1F7F-32F6-4CC4-B8EE-BB6BB01F470F}</ProjectGuid>
+    <RootNamespace>teht1234</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>teht1234</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -116,6 +115,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Henkilo.h" />
+    <ClInclude Include="Koulu.h" />
+    <ClInclude Include="Koulutusohjelma.h" />
+    <ClInclude Include="Opettaja.h" />
+    <ClInclude Include="Opiskelija.h" />
+    <ClInclude Include="Tyontekija.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Henkilo.cpp" />
+    <ClCompile Include="Koulu.cpp" />
+    <ClCompile Include="Koulutusohjelma.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Opettaja.cpp" />
+    <ClCompile Include="Opiskelija.cpp" />
+    <ClCompile Include="Tyontekija.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
