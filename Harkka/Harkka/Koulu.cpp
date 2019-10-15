@@ -38,12 +38,10 @@ void Koulu::asetaNimi(const string & nimi)
 void Koulu::tulostaKoulutusOhjelmat() const
 {
 	//toimii
-	string temp;
-
+	
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++)
 	{
-		temp = koulutusohjelmat_[i].annaNimi();
-		cout << temp << " ";
+		cout << koulutusohjelmat_[i].annaNimi() << " ";
 	}
 }
 
