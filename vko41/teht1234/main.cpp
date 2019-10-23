@@ -1,4 +1,3 @@
-//#include "Koulutusohjelma.h";
 #include "Koulu.h"
 #include <iostream>
 
@@ -6,32 +5,42 @@
 
 int main() {
 
-	using std::cout;
-	using std::endl;
-	using std::endl;
-
+	using namespace std;
+	/*
 	Koulutusohjelma tite("TiTe");
 	Koulutusohjelma raksa("Rakennus");
-	//tite.lisaaOpettaja();
-	//tite.lisaaOpettaja();
-	//tite.lisaaOpiskelija();
-	//tite.lisaaOpiskelija();
 
-	//tite.tulostaOpettajat();
-	//tite.tulostaOpiskelija(); 
 
 
 	Koulu tamk;
+
+	tamk.lisaaKoulutusOhjelma();
+	tamk.lisaaKoulutusOhjelma();
 	
 	tamk.lisaaKoulutusOhjelmaanOpiskelija();
 	tamk.lisaaKoulutusOhjelmaanOpiskelija();
-	tamk.lisaaKoulutusOhjelmaanOpiskelija();
+	tamk.lisaaKoulutusOhjelmaanOpettaja();
 
+	cout << "tulosta koulutusohjelmat \n";
 	tamk.tulostaKoulutusOhjelmat();
 
-	tamk.tulostaKoulutusOhjelmienMaara();
 
-	
+
+	tamk.tulostaKoulutusOhjelmanOpettajat();
+	tamk.tulostaKoulutusOhjelmienMaara();
+	*/
+
+	Koulu amk("TAMK");
+	amk.lisaaKoulutusOhjelma();
+	cout << "Lisaa opettaja\n";
+	amk.lisaaKoulutusOhjelmaanOpettaja();
+	cout << "Lisaa opiskelija\n";
+	system("pause");
+	amk.lisaaKoulutusOhjelmaanOpiskelija();
+
+	amk.tulostaKoulutusOhjelmat();
+	amk.tulostaKoulutusOhjelmanOpettajat();
+	amk.tulostaKoulutusOhjelmanOpiskelijat();
 
 	system("pause");
 	return 0;

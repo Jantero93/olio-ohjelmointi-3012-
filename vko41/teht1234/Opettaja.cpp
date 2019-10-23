@@ -15,6 +15,16 @@ Opettaja::Opettaja(const Opettaja & alkup):Tyontekija(alkup), opetusala_(alkup.o
 {
 }
 
+Opettaja& Opettaja::operator=(const Opettaja& ope)
+{
+	if (this != &ope) {
+		Tyontekija::operator=(ope);
+		opetusala_ = ope.opetusala_;
+	}
+
+	return *this;
+}
+
 string Opettaja::annaOpetusala() const
 {
 	return opetusala_;

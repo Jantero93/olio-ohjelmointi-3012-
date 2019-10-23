@@ -1,7 +1,6 @@
 #pragma once
 #include "Henkilo.h"
-class Opiskelija :
-public Henkilo
+class Opiskelija : public Henkilo
 {
 public:
 	//oletus
@@ -11,6 +10,8 @@ public:
 	//kopio
 	Opiskelija(const Opiskelija& alkup);
 	~Opiskelija();
+
+	Opiskelija& operator=(const Opiskelija& opisk);
 
 	//getteri
 	string annaOpiskelijanumero() const;

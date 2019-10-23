@@ -20,6 +20,17 @@ Tyontekija::~Tyontekija()
 {
 }
 
+Tyontekija & Tyontekija::operator=(const Tyontekija & tyo)
+{
+	if (this != &tyo) {
+		Henkilo::operator=(tyo);
+		palkka_ = tyo.palkka_;
+		tunnus_ = tyo.tunnus_;
+	}
+
+	return *this;
+}
+
 string Tyontekija::annaPalkka() const
 {
 	return palkka_;

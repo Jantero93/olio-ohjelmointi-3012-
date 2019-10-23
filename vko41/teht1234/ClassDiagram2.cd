@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Henkilo" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAQAAQYAAgAAAAAAMABEAAAAAACAAAAAAEABYAA=</HashCode>
+      <FileName>Henkilo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Koulu" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAABAIBQACACAAAAAAAAAAAQAAAIAACEJAAAAAA=</HashCode>
+      <FileName>Koulu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Koulutusohjelma" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAIAQAAAAAAAAIAAACAAAAAAMAAiBAAAAAgA=</HashCode>
+      <FileName>Koulutusohjelma.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Opettaja" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAEAAAAAAAAgBAAAIAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Opettaja.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Opiskelija" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAQAAAAAAAAAAgCAAABAAAAgAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Opiskelija.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tyontekija" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAABIAAABAAAAAAEBAAAAAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Tyontekija.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
