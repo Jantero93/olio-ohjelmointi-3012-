@@ -15,27 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Henkilo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Opettaja.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Opiskelija.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tyontekija.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Koulutusohjelma.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Koulu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Henkilo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Koulu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Koulutusohjelma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Opettaja.cpp">
@@ -47,14 +36,31 @@
     <ClCompile Include="Tyontekija.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="funktiot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Koulutusohjelma.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Koulu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Henkilo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Koulu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Koulutusohjelma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Opettaja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Opiskelija.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tyontekija.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="funktiot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

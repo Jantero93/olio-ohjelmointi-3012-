@@ -10,6 +10,9 @@ public:
 	Henkilo(const Henkilo& alkup);
 	~Henkilo();
 
+	//operator
+	Henkilo& operator=(const Henkilo& hlo);
+
 	//getterit
 	string annaEtunimi() const;
 	string annaSukunimi() const;

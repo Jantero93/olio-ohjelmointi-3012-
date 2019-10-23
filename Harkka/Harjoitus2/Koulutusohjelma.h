@@ -4,6 +4,8 @@
 #include "Opiskelija.h"
 #include "Opettaja.h"
 
+
+
 using std::vector;
 using std::string;
 

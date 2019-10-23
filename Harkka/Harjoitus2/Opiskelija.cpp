@@ -1,9 +1,5 @@
 #include "Opiskelija.h"
-#include "Henkilo.h"
 #include <iostream>
-
-
-
 
 Opiskelija::Opiskelija() : Henkilo(), opiskelijanumero_()
 {
@@ -21,6 +17,16 @@ Opiskelija::Opiskelija(const Opiskelija& alkup): Henkilo(alkup), opiskelijanumer
 
 Opiskelija::~Opiskelija()
 {
+}
+
+Opiskelija &Opiskelija::operator=(const Opiskelija &opisk)
+{
+	if (this != &opisk) {
+		Henkilo::operator=(opisk);
+		opiskelijanumero_ = opisk.opiskelijanumero_;
+	}
+	
+	return *this;
 }
 
 string Opiskelija::annaOpiskelijanumero() const

@@ -1,5 +1,4 @@
 #include "Opettaja.h"
-#include "Tyontekija.h"
 #include <iostream>
 
 Opettaja::Opettaja() : Tyontekija(), opetusala_()
@@ -13,6 +12,16 @@ Opettaja::Opettaja(const string & etunimi, const string & sukunimi, const string
 
 Opettaja::Opettaja(const Opettaja & alkup):Tyontekija(alkup), opetusala_(alkup.opetusala_)
 {
+}
+
+Opettaja& Opettaja::operator=(const Opettaja& ope)
+{
+	if (this != &ope) {
+		Tyontekija::operator=(ope);
+		opetusala_ = ope.opetusala_;
+	}
+
+	return *this;
 }
 
 string Opettaja::annaOpetusala() const

@@ -24,7 +24,7 @@ public:
 	void lisaaKoulutusOhjelmaanOpiskelija();
 
 private:
-	int etsiKoulutusohjelma() const;
+	int etsiKoulutusohjelma() const;	
 	string nimi_;
 	vector <Koulutusohjelma> koulutusohjelmat_;
 };

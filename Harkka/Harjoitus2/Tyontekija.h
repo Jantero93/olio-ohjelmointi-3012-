@@ -1,13 +1,14 @@
 #pragma once
 #include "Henkilo.h"
-class Tyontekija :
-public Henkilo
+class Tyontekija : public Henkilo
 {
 public:
 	Tyontekija(); //oletus
 	Tyontekija(const string& etunimi, const string& sukunimi, const string& osoite, const string& puhelinnumero, const string& palkka, const string& tunnus); //parametrinen
 	Tyontekija(const Tyontekija& alkup); //kopiorakentaja
 	~Tyontekija(); // tuhoaja
+
+	Tyontekija& operator=(const Tyontekija& tyo); // operaattori
 
 	//getteri
 	string annaPalkka() const;

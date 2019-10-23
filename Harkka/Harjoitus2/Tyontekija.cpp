@@ -1,5 +1,4 @@
-#include "Tyontekija.h";
-//#include "Henkilo.h";
+#include "Tyontekija.h"
 #include <iostream>
 
 Tyontekija::Tyontekija() : Henkilo(), palkka_(), tunnus_()
@@ -18,6 +17,17 @@ Tyontekija::Tyontekija(const Tyontekija & alkup): Henkilo(alkup), palkka_(alkup.
 
 Tyontekija::~Tyontekija()
 {
+}
+
+Tyontekija & Tyontekija::operator=(const Tyontekija & tyo)
+{
+	if (this != &tyo) {
+		Henkilo::operator=(tyo);
+		palkka_ = tyo.palkka_;
+		tunnus_ = tyo.tunnus_;
+	}
+
+	return *this;
 }
 
 string Tyontekija::annaPalkka() const

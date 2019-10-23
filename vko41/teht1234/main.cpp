@@ -31,15 +31,18 @@ int main() {
 	*/
 
 	Koulu amk("TAMK");
+	cout << "Lisaa koulutusohjelma \n";
 	amk.lisaaKoulutusOhjelma();
 	cout << "Lisaa opettaja\n";
 	amk.lisaaKoulutusOhjelmaanOpettaja();
 	cout << "Lisaa opiskelija\n";
-	system("pause");
 	amk.lisaaKoulutusOhjelmaanOpiskelija();
 
+	cout << "Tulosta koulutusohjelmat \n"; 
 	amk.tulostaKoulutusOhjelmat();
+	cout << "Tulosta koutusohjelman opettajat\n";
 	amk.tulostaKoulutusOhjelmanOpettajat();
+	cout << "Tulosta koulutusohjelmat opiskelijat\n";
 	amk.tulostaKoulutusOhjelmanOpiskelijat();
 
 	system("pause");
