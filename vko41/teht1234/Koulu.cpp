@@ -17,13 +17,16 @@ Koulu::~Koulu()
 }
 
 void Koulu::lisaaKoulutusOhjelma()
-{
-	string nimi;
-	getline(cin, nimi);
+{	
 	Koulutusohjelma temp;
+	string nimi;
+	cout << "Anna koulutusohjelman nimi: ";
+	getline(cin, nimi);	
+	
 	temp.asetaNimi(nimi);
 	koulutusohjelmat_.push_back(temp);
-	/* Tai: koulutusohjelmat_.push_back(Koulutusohjelma(nimi)) */
+	
+	//koulutusohjelmat_.push_back(Koulutusohjelma(nimi));
 }
 
 string Koulu::annaNimi() const
@@ -42,12 +45,13 @@ void Koulu::tulostaKoulutusOhjelmat() const
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++)
 	{
 	temp = koulutusohjelmat_[i].annaNimi();
-		cout << temp << " ";
+	cout << temp << endl;
 	}
 }
 
 void Koulu::tulostaKoulutusOhjelmienMaara() const
 {	
+	cout << "Koulutusohjelmien maara: ";
 	cout << koulutusohjelmat_.size() << std::endl;
 }
 
@@ -78,6 +82,21 @@ void Koulu::tulostaKoulutusOhjelmanOpettajat() const
 	}
 	
 }
+
+void Koulu::tulostaKoulutusOhjelmanOpiskelijat() const
+{
+
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {
+		koulutusohjelmat_[indeksi].tulostaOpiskelija();
+	}
+
+}
+
 
 void Koulu::lisaaKoulutusOhjelmaanOpiskelija()
 {
@@ -112,16 +131,4 @@ int Koulu::etsiKoulutusohjelma() const
 	return -1; /* Ei löytynyt, palauta -1 */
 }
 
-void Koulu::tulostaKoulutusOhjelmanOpiskelijat() const
-{
 
-	int indeksi = etsiKoulutusohjelma();
-	if (indeksi == -1) {
-		cout << "Koulutusohjelmaa ei loytynyt" << endl;
-	}
-
-	else {
-		koulutusohjelmat_[indeksi].tulostaOpiskelija();
-	}
-
-}

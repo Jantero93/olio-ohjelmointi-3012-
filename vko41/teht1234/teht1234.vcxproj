@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="funktiot.h" />
     <ClInclude Include="Henkilo.h" />
     <ClInclude Include="Koulu.h" />
     <ClInclude Include="Koulutusohjelma.h" />
@@ -123,6 +124,7 @@
     <ClInclude Include="Tyontekija.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="funktiot.cpp" />
     <ClCompile Include="Henkilo.cpp" />
     <ClCompile Include="Koulu.cpp" />
     <ClCompile Include="Koulutusohjelma.cpp" />

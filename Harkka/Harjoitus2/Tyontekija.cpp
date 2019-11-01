@@ -1,4 +1,5 @@
-#include "Tyontekija.h"
+#include "Tyontekija.h";
+//#include "Henkilo.h";
 #include <iostream>
 
 Tyontekija::Tyontekija() : Henkilo(), palkka_(), tunnus_()

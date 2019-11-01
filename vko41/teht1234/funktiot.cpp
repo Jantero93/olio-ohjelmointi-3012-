@@ -6,8 +6,10 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-string menu() {
-	string valinta = "99";
+int menu() {
+	
+	string temp;
+	int valinta;
 
 	cout << " 1) Lisaa koulutusohjelma" << endl;
 	cout << " 2) Tulosta koulutusohjelmien nimet" << endl;
@@ -25,12 +27,13 @@ string menu() {
 	cout << "14) Lue tiedot" << endl;
 	cout << "15) Tallenna tiedot" << endl;
 	cout << " 0) Lopeta" << endl << endl;
-		
+	
 	do {
 		cout << "Anna valintasi: ";
-		getline(cin, valinta);
-	} while (valinta.length() > 2);  /* Syote max 2 merkkia */	
+		getline(cin, temp);
+	} while (temp.length() > 5); /* Syote max 5 merkkia */
 
+	valinta = stoi(temp);
 	return valinta;
 }
 
@@ -39,5 +42,9 @@ void clear() {
 }
 
 void tauko() {
-	Sleep(1000);
+	Sleep(1500);
+}
+
+void lisaaKoulutusOhjelma() {
+
 }

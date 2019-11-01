@@ -1,50 +1,71 @@
 #include "Koulu.h"
+#include "Koulutusohjelma.h"
 #include <iostream>
+#include <string>
+#include <Windows.h>
+#include "funktiot.h"
 
-
+using namespace std;
 
 int main() {
+	Koulu TAMK;
+	int valinta;
+		
+	do {
+		clear();
+		valinta = menu();
+		
+		switch (valinta)
+		{
 
-	using namespace std;
-	/*
-	Koulutusohjelma tite("TiTe");
-	Koulutusohjelma raksa("Rakennus");
+		case 1:
+				clear();
+				TAMK.lisaaKoulutusOhjelma();
+				cout << "Lisatty!" << endl;
+				tauko();
+				break;
 
+		case 2:
+				clear();
+				TAMK.tulostaKoulutusOhjelmat();
+				system("pause");
+				break;
 
+		case 3:
+				clear();
+				TAMK.tulostaKoulutusOhjelmienMaara();
+				system("pause");
+				break;
 
-	Koulu tamk;
+		case 4:
+				clear();
+				TAMK.lisaaKoulutusOhjelmaanOpettaja();
+				cout << "Lisatty!" << endl;
+				tauko();
+				break;
 
-	tamk.lisaaKoulutusOhjelma();
-	tamk.lisaaKoulutusOhjelma();
-	
-	tamk.lisaaKoulutusOhjelmaanOpiskelija();
-	tamk.lisaaKoulutusOhjelmaanOpiskelija();
-	tamk.lisaaKoulutusOhjelmaanOpettaja();
+		case 5:
+				clear();
+				TAMK.tulostaKoulutusOhjelmanOpettajat();
+				tauko();
+				break;
 
-	cout << "tulosta koulutusohjelmat \n";
-	tamk.tulostaKoulutusOhjelmat();
+		case 6:
+				clear();
+				TAMK.lisaaKoulutusOhjelmaanOpiskelija();
+				cout << "Lisatty!";
+				break;
 
+		case 7:
+				clear();
+				TAMK.tulostaKoulutusOhjelmanOpiskelijat();
+				system("pause");
+				break;
 
+			
+		}
 
-	tamk.tulostaKoulutusOhjelmanOpettajat();
-	tamk.tulostaKoulutusOhjelmienMaara();
-	*/
+	} while (valinta != 0);
 
-	Koulu amk("TAMK");
-	cout << "Lisaa koulutusohjelma \n";
-	amk.lisaaKoulutusOhjelma();
-	cout << "Lisaa opettaja\n";
-	amk.lisaaKoulutusOhjelmaanOpettaja();
-	cout << "Lisaa opiskelija\n";
-	amk.lisaaKoulutusOhjelmaanOpiskelija();
-
-	cout << "Tulosta koulutusohjelmat \n"; 
-	amk.tulostaKoulutusOhjelmat();
-	cout << "Tulosta koutusohjelman opettajat\n";
-	amk.tulostaKoulutusOhjelmanOpettajat();
-	cout << "Tulosta koulutusohjelmat opiskelijat\n";
-	amk.tulostaKoulutusOhjelmanOpiskelijat();
-
-	system("pause");
 	return 0;
 }

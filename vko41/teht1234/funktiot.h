@@ -2,6 +2,6 @@
 #include <string>
 using std::string;
 
-string menu();
+int menu();
 void clear();
 void tauko();

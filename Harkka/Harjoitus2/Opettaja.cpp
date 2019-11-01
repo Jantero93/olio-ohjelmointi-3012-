@@ -1,4 +1,5 @@
 #include "Opettaja.h"
+#include "Tyontekija.h"
 #include <iostream>
 
 Opettaja::Opettaja() : Tyontekija(), opetusala_()
