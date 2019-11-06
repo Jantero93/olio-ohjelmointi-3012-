@@ -18,7 +18,6 @@ int main() {
 		if (valinta == "1") {
 			clear();
 			TAMK.lisaaKoulutusOhjelma();
-			cout << "Lisatty!" << endl;
 			system("pause");
 		}
 
@@ -37,7 +36,6 @@ int main() {
 		if (valinta == "4") {
 		clear();
 		TAMK.lisaaKoulutusOhjelmaanOpettaja();
-		cout << "Lisatty!" << endl;
 		system("pause");
 		}
 
@@ -50,13 +48,30 @@ int main() {
 		if (valinta == "6") {
 			clear();
 			TAMK.lisaaKoulutusOhjelmaanOpiskelija();
-			cout << "Lisatty!";
 			system("pause");
 		}
 
 		if (valinta == "7") {
 			clear();
 			TAMK.tulostaKoulutusOhjelmanOpiskelijat();
+			system("pause");
+		}
+
+		if (valinta == "8") { /* Poista koulutusohjelma */
+			clear();
+			TAMK.poistaKoulutusOhjelma();
+			system("pause");
+		}
+
+		if (valinta == "9") { /* Poista Opettaja */
+			clear();
+			TAMK.poistaKoulutusOhjelmastaOpettaja();
+			system("pause");
+		}
+
+		if (valinta == "10") {
+			clear();
+			TAMK.poistaKoulutusOhjelmastaOpiskelija();
 			system("pause");
 		}
 

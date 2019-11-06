@@ -19,6 +19,7 @@ public:
 	void tulosta() const;
 
 private:
+	//int etsiOpettaja() const;
 	string opetusala_;
 };
 

@@ -1,6 +1,9 @@
 #include "Opettaja.h"
 #include "Tyontekija.h"
 #include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 
 Opettaja::Opettaja() : Tyontekija(), opetusala_()
 {
@@ -47,3 +50,23 @@ void Opettaja::tulosta() const
 	Tyontekija::tulosta();
 	std::cout << opetusala_ << std::endl;
 }
+
+//etsintä rutiini
+/*
+int Opettaja::etsiOpettaja() const
+{
+	string temp;
+	cout << "Etsi koulutusohjelma: ";
+	getline(cin, temp);
+
+	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {
+
+		if (temp == koulutusohjelmat_[i].annaNimi()) {
+			return i;
+		}
+
+	}
+
+	return -1; /* Ei löytynyt, palauta -1 
+}
+*/

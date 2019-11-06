@@ -22,6 +22,9 @@ public:
 	void lisaaKoulutusOhjelma();
 	void lisaaKoulutusOhjelmaanOpettaja();
 	void lisaaKoulutusOhjelmaanOpiskelija();
+	void poistaKoulutusOhjelma();
+	void poistaKoulutusOhjelmastaOpettaja();
+	void poistaKoulutusOhjelmastaOpiskelija();
 
 private:
 	int etsiKoulutusohjelma() const;	

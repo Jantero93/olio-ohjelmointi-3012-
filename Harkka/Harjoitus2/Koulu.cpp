@@ -25,6 +25,7 @@ void Koulu::lisaaKoulutusOhjelma()
 	
 	temp.asetaNimi(nimi);
 	koulutusohjelmat_.push_back(temp);
+	cout << "Lisatty!" << endl;
 	
 	//koulutusohjelmat_.push_back(Koulutusohjelma(nimi));
 }
@@ -65,6 +66,7 @@ void Koulu::lisaaKoulutusOhjelmaanOpettaja()
 
 	else {
 		koulutusohjelmat_[indeksi].lisaaOpettaja();
+		cout << "Lisatty!" << endl;
 	}
 
 }
@@ -108,8 +110,49 @@ void Koulu::lisaaKoulutusOhjelmaanOpiskelija()
 
 	else {
 		koulutusohjelmat_[indeksi].lisaaOpiskelija();
+		cout << "Lisatty!" << endl;
 	}
 
+}
+
+void Koulu::poistaKoulutusOhjelma() 
+{
+	int indeksi = etsiKoulutusohjelma();
+
+	if (indeksi == -1)
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+
+	else {
+		koulutusohjelmat_.erase(koulutusohjelmat_.begin() + indeksi);
+		cout << "Poistettu!" << endl;
+	}
+}
+
+void Koulu::poistaKoulutusOhjelmastaOpettaja(){
+	int indeksi = etsiKoulutusohjelma();
+
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {		
+		koulutusohjelmat_[indeksi].poistaOpettaja();
+	}
+	
+}
+
+void Koulu::poistaKoulutusOhjelmastaOpiskelija()
+{
+	int indeksi = etsiKoulutusohjelma();
+
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {
+		koulutusohjelmat_[indeksi].poistaOpiskelija();
+	
+	}
 }
 
 
@@ -122,13 +165,13 @@ int Koulu::etsiKoulutusohjelma() const
 
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {
 
-		if (temp == koulutusohjelmat_[i].annaNimi()) {
+		if (temp == koulutusohjelmat_[i].annaNimi()) 
 			return i;
-		}
-
 	}
 
 	return -1; /* Ei löytynyt, palauta -1 */
 }
+
+
 
 
