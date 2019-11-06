@@ -19,7 +19,7 @@ int main() {
 			clear();
 			TAMK.lisaaKoulutusOhjelma();
 			cout << "Lisatty!" << endl;
-			tauko();
+			system("pause");
 		}
 
 		if (valinta == "2") {
@@ -38,19 +38,20 @@ int main() {
 		clear();
 		TAMK.lisaaKoulutusOhjelmaanOpettaja();
 		cout << "Lisatty!" << endl;
-		tauko();
+		system("pause");
 		}
 
 		if (valinta == "5") {
 			clear();
 			TAMK.tulostaKoulutusOhjelmanOpettajat();
-			tauko();
+			system("pause");
 		}
 
 		if (valinta == "6") {
 			clear();
 			TAMK.lisaaKoulutusOhjelmaanOpiskelija();
 			cout << "Lisatty!";
+			system("pause");
 		}
 
 		if (valinta == "7") {

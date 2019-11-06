@@ -10,7 +10,18 @@ Paivays::Paivays() : pp_(1), kk_(1), vv_(1970)
 
 Paivays::Paivays(int pp, int kk, int vv) : pp_(pp), kk_(kk), vv_(vv)
 {
-	cout << "Paivays: parametrinen rakentaja " << this << endl;
+	/* parametrinen rakentaja */
+	if (pp < 1 || pp > 31) {
+		throw std::exception("Ei hyva paiva!");
+	}
+
+	if (kk < 1 || kk > 12) {
+		throw std::exception("Ei hyva kuukausi!");
+	}
+
+
+	if (vv < 1970 || vv > 2099)
+		throw std::exception("Ei hyva vuosi!");
 }
 
 //kopiorakentaja toteutus

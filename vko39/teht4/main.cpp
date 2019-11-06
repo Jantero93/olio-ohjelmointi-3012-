@@ -1,8 +1,11 @@
 #include "Kalenterimerkinta.h";
+using namespace std;
+
 int main() {
-	Kalenterimerkinta esimerkki;
+	//Kalenterimerkinta esimerkki;
 //	esimerkki.kysyTiedot();
 	
+	/*
 	std::cout << std::endl << "TULOSTA KYSYTYT" << std::endl;
 
 	esimerkki.tulosta();
@@ -18,6 +21,15 @@ int main() {
 	printf("Kysely\n");
 	esimerkki.kysyTiedot();
 	esimerkki.tulosta();
+	*/
+
+	try {
+		Paivays tanaan(-6, -12, -2019);
+		tanaan.tulostaPaivays();
+	}
+	catch (const std::exception& e) {
+		cerr << "Virhe!" << e.what() << endl;
+	}
 
 	system("pause");
 	return 0;

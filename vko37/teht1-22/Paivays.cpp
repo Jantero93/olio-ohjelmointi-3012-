@@ -10,8 +10,11 @@ Paivays::Paivays() : pp_(1), kk_(1), vv_(1970)
 
 Paivays::Paivays(int pp, int kk, int vv) : pp_(pp), kk_(kk), vv_(vv)
 {
-	cout << "Paivays: parametrinen rakentaja " << this << endl;
+/* try throw catch shaibaa */
+
 }
+
+
 
 //kopiorakentaja toteutus
 Paivays::Paivays(const Paivays &alkup): pp_(alkup.pp_), kk_(alkup.kk_), vv_(alkup.vv_)

@@ -7,7 +7,7 @@ using std::endl;
 using std::cin;
 
 string menu() {
-	string valinta = "99";
+	string valinta;
 
 	cout << " 1) Lisaa koulutusohjelma" << endl;
 	cout << " 2) Tulosta koulutusohjelmien nimet" << endl;
