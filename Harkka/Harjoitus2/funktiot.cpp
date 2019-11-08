@@ -26,10 +26,22 @@ string menu() {
 	cout << "15) Tallenna tiedot" << endl;
 	cout << " 0) Lopeta" << endl << endl;
 		
-	do {
+	//do {
 		cout << "Anna valintasi: ";
 		getline(cin, valinta);
-	} while (valinta.length() > 2);  /* Syote max 2 merkkia */	
+//	} while (valinta.length() > 2);  /* Syote max 2 merkkia */	
+
+		if (valinta.length() < 1) {
+			throw std::exception("Liian lyhyt syote");
+		}
+
+		if (valinta.length() > 2) {
+			throw std::exception("Syotteessa liian paljon merkkeja");
+		}
+
+		if (validisyote(valinta) == false) {
+			throw std::exception("Kirjaimia syotteessa");
+		}
 
 	return valinta;
 }
@@ -40,4 +52,27 @@ void clear() {
 
 void tauko() {
 	Sleep(1000);
+}
+
+bool validisyote(string syote) {
+	const string hyvaksytytmerkit = "0123456789";
+	int laskuri = 0;	
+
+	for (int i = 0; i < syote.length(); i++) {		
+
+		for (int j = 0; j < hyvaksytytmerkit.length(); j++) {
+
+			if (syote[i] == hyvaksytytmerkit[j]) {
+				laskuri++;
+			}
+		}
+	}
+
+	if (laskuri == syote.length()) {
+		return true;
+	}
+
+	else {
+		return false;
+	}	
 }

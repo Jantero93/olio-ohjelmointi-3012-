@@ -206,13 +206,10 @@ int Koulu::etsiKoulutusohjelma() const
 
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {
 
-		if (temp == koulutusohjelmat_[i].annaNimi()) 
+		if (temp == koulutusohjelmat_[i].annaNimi()) {
 			return i;
+		}
 	}
 
 	return -1; /* Ei löytynyt, palauta -1 */
 }
-
-
-
-

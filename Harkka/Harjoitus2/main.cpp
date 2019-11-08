@@ -13,7 +13,17 @@ int main() {
 		
 	do {
 		clear();
-		valinta = menu();
+
+		try {
+			valinta = menu(); /* kokeile menuvalinta*/
+		}
+
+		catch (const std::exception &e) { /* korjausliike virheelliseen menu valintaan */
+			clear();
+			cerr << "Virhe! " << e.what() << endl;
+			system("pause");
+			clear();
+		}
 
 		if (valinta == "1") {
 			clear();
