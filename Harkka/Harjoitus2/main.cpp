@@ -69,12 +69,29 @@ int main() {
 			system("pause");
 		}
 
-		if (valinta == "10") {
+		if (valinta == "10") { /* Poista opiskelija */
 			clear();
 			TAMK.poistaKoulutusOhjelmastaOpiskelija();
 			system("pause");
 		}
 
+		if (valinta == "11") { /* Paivita koulutusohjelman nimi */
+			clear();
+			TAMK.paivitaKoulutusOhjelmanNimi();
+			system("pause");
+		}
+
+		if (valinta == "12") { /* Paivita opettajan tiedot */
+			clear();
+			TAMK.paivitaOpettajanTiedot();
+			system("pause");
+		}
+
+		if (valinta == "13") { /* Paivita oppilaan tiedot */
+			clear();
+			TAMK.paivitaOppilaanTiedot();
+			system("pause");
+		}
 			
 		
 

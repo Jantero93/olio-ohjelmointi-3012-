@@ -89,6 +89,35 @@ void Koulutusohjelma::poistaOpettaja()
 
 }
 
+void Koulutusohjelma::paivitaOpiskelija()
+{
+	int indeksi = etsiOppilas();
+
+	if (indeksi == -1) {
+		cout << "Opiskelijaa ei loytynyt" << endl;
+	}
+
+	else {
+		cout << "Anna uudet tiedot" << endl;
+		opiskelijat_[indeksi].kysyTiedot();
+	}
+}
+
+void Koulutusohjelma::paivitaOpettaja()
+{
+	int indeksi = etsiOpettaja();
+
+	if (indeksi == -1) {
+		cout << "Opettajaa ei loytynyt" << endl;
+	}
+
+	else {
+		cout << "Anna uudet tiedot" << endl;
+		opettajat_[indeksi].kysyTiedot();
+	}
+	
+}
+
 //etsintä rutiini
 int Koulutusohjelma::etsiOpettaja() const
 {

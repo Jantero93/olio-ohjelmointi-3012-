@@ -25,6 +25,9 @@ public:
 	void poistaKoulutusOhjelma();
 	void poistaKoulutusOhjelmastaOpettaja();
 	void poistaKoulutusOhjelmastaOpiskelija();
+	void paivitaKoulutusOhjelmanNimi();
+	void paivitaOpettajanTiedot();
+	void paivitaOppilaanTiedot();
 
 private:
 	int etsiKoulutusohjelma() const;	

@@ -25,6 +25,8 @@ public:
 	void tulostaOpiskelija() const;
 	void poistaOpiskelija();
 	void poistaOpettaja();
+	void paivitaOpiskelija();
+	void paivitaOpettaja();
 
 private:
 	int etsiOpettaja() const;

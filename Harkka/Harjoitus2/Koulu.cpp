@@ -2,7 +2,6 @@
 #include <iostream>
 using std::cout; using std::cin; using std::endl;
 
-
 Koulu::Koulu() :nimi_(), koulutusohjelmat_()
 {
 }
@@ -150,8 +149,50 @@ void Koulu::poistaKoulutusOhjelmastaOpiskelija()
 	}
 
 	else {
-		koulutusohjelmat_[indeksi].poistaOpiskelija();
-	
+		koulutusohjelmat_[indeksi].poistaOpiskelija();	
+	}
+}
+
+void Koulu::paivitaOppilaanTiedot()
+{
+	int indeksi = etsiKoulutusohjelma();
+
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {
+		koulutusohjelmat_[indeksi].paivitaOpiskelija();
+	}
+
+}
+
+void Koulu::paivitaKoulutusOhjelmanNimi()
+{
+	int indeksi = etsiKoulutusohjelma();
+	string temp;
+
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {
+		cout << "Anna koulutusohjelman uusi nimi: "; 
+		getline(cin, temp);
+		koulutusohjelmat_[indeksi].asetaNimi(temp);
+	}
+}
+
+void Koulu::paivitaOpettajanTiedot()
+{
+	int indeksi = etsiKoulutusohjelma();
+
+	if (indeksi == -1) {
+		cout << "Koulutusohjelmaa ei loytynyt" << endl;
+	}
+
+	else {
+		koulutusohjelmat_[indeksi].paivitaOpettaja();
 	}
 }
 
