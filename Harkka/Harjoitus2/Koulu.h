@@ -2,6 +2,7 @@
 #include "Koulutusohjelma.h"
 #include <vector>
 #include <string>
+#include <fstream>
 
 
 class Koulu 
@@ -14,6 +15,8 @@ public:
 
 	string annaNimi() const;
 	void asetaNimi(const string& nimi);
+
+	int annaKoulutuohjelmienMaara();
 
 	void tulostaKoulutusOhjelmat() const;
 	void tulostaKoulutusOhjelmienMaara() const;
@@ -29,7 +32,10 @@ public:
 	void paivitaOpettajanTiedot();
 	void paivitaOppilaanTiedot();
 
+	void tallennaTiedot();
+
 private:
+	
 	int etsiKoulutusohjelma() const;	
 	string nimi_;
 	vector <Koulutusohjelma> koulutusohjelmat_;

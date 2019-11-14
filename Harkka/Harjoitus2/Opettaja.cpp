@@ -4,6 +4,8 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::ifstream;
+using std::ofstream;
 
 Opettaja::Opettaja() : Tyontekija(), opetusala_()
 {
@@ -50,6 +52,7 @@ void Opettaja::tulosta() const
 	Tyontekija::tulosta();
 	std::cout << opetusala_ << std::endl;
 }
+
 
 //etsintä rutiini
 /*

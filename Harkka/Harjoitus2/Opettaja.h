@@ -1,5 +1,6 @@
 #pragma once
 #include "Tyontekija.h"
+#include <fstream>
 class Opettaja : public Tyontekija
 {
 public:
@@ -17,6 +18,7 @@ public:
 		//muu
 	void kysyTiedot();
 	void tulosta() const;
+
 
 private:
 	//int etsiOpettaja() const;

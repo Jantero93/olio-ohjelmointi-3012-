@@ -2,7 +2,7 @@
 #include "Henkilo.h"
 
 using std::cout; using std::cin; using std::endl;
-
+using std::ofstream; using std::ifstream;
 //oletus
 Henkilo::Henkilo():etunimi_(), sukunimi_(), osoite_(), puhelinnumero_()
 {

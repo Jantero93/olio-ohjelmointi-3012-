@@ -1,6 +1,6 @@
 #include "Koulu.h"
 #include <iostream>
-using std::cout; using std::cin; using std::endl;
+using std::cout; using std::cin; using std::endl; using std::ofstream; using std::ifstream;
 
 Koulu::Koulu() :nimi_(), koulutusohjelmat_()
 {
@@ -37,6 +37,12 @@ string Koulu::annaNimi() const
 void Koulu::asetaNimi(const string & nimi)
 {
 	nimi_ = nimi;
+}
+
+int Koulu::annaKoulutuohjelmienMaara()
+{
+	int koulutusohjelmienMaara = koulutusohjelmat_.size();
+	return koulutusohjelmienMaara;
 }
 
 void Koulu::tulostaKoulutusOhjelmat() const
@@ -166,6 +172,28 @@ void Koulu::paivitaOppilaanTiedot()
 	}
 
 }
+
+void Koulu::tallennaTiedot()
+{
+	/* .csv tiedostojen alustus*/
+
+	ofstream opettajat;
+	ofstream oppilaat;
+
+	opettajat.open("opettajat.csv", std::ios::trunc);
+	opettajat.close();
+
+	oppilaat.open("oppilaat.csv", std::ios::trunc);
+	oppilaat.close();
+
+	/*koulutus ohjelmat läpi */
+	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {		
+		koulutusohjelmat_[i].tallennaOpettajat();
+		koulutusohjelmat_[i].tallennaOppilaat();
+	}
+}
+
+
 
 void Koulu::paivitaKoulutusOhjelmanNimi()
 {

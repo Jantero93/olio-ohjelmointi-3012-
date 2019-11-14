@@ -3,8 +3,7 @@
 #include <vector>
 #include "Opiskelija.h"
 #include "Opettaja.h"
-
-
+#include <fstream>
 
 using std::vector;
 using std::string;
@@ -27,6 +26,12 @@ public:
 	void poistaOpettaja();
 	void paivitaOpiskelija();
 	void paivitaOpettaja();
+
+	void tallennaOpettajat();
+	void tallennaOppilaat();
+
+	int montakoOpiskelijaaKoulutusohjelmassa();
+	int montakoOpettajaaKoulutusohjelmassa();
 
 private:
 	int etsiOpettaja() const;

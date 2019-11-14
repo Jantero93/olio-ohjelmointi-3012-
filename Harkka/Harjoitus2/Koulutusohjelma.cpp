@@ -3,6 +3,8 @@
 using std::cout;
 using std::cin;
 using std::endl;
+using std::ifstream;
+using std::ofstream;
 
 
 
@@ -43,6 +45,8 @@ void Koulutusohjelma::lisaaOpiskelija()
 	Opiskelija temp;
 	temp.kysyTiedot();
 	opiskelijat_.push_back(temp);
+
+	
 }
 
 void Koulutusohjelma::tulostaOpettajat() const
@@ -91,6 +95,7 @@ void Koulutusohjelma::poistaOpettaja()
 
 void Koulutusohjelma::paivitaOpiskelija()
 {
+	
 	int indeksi = etsiOppilas();
 
 	if (indeksi == -1) {
@@ -115,8 +120,72 @@ void Koulutusohjelma::paivitaOpettaja()
 		cout << "Anna uudet tiedot" << endl;
 		opettajat_[indeksi].kysyTiedot();
 	}
+
+	
 	
 }
+
+void Koulutusohjelma::tallennaOpettajat()
+{
+	ofstream tiedosto;
+	tiedosto.open("opettajat.csv", std::ios::app);
+
+	if (tiedosto.is_open()) {
+		
+		for (unsigned int i = 0; i < opettajat_.size(); i++) {
+			tiedosto << annaNimi() << ";"; /* koulutusohjelman nimi */
+			tiedosto << opettajat_[i].annaEtunimi() << ";";
+			tiedosto << opettajat_[i].annaSukunimi() << ";";
+			tiedosto << opettajat_[i].annaOsoite() << ";";
+			tiedosto << opettajat_[i].annaPalkka() << ";";
+			tiedosto << opettajat_[i].annaTunnus() << ";";
+			tiedosto << opettajat_[i].annaOpetusala() << endl;
+		}
+	}
+	else {
+		cout << "Tiedosto ei aukea!" << endl;
+	}
+	tiedosto.close();
+
+}
+
+void Koulutusohjelma::tallennaOppilaat()
+{
+	ofstream tiedosto;
+	tiedosto.open("oppilaat.csv", std::ios::app);
+
+	if (tiedosto.is_open()) {
+
+		for (unsigned int i = 0; i < opiskelijat_.size(); i++) {
+			tiedosto << annaNimi() << ";"; /* koulutusohjelman nimi */
+			tiedosto << opiskelijat_[i].annaEtunimi() << ";";
+			tiedosto << opiskelijat_[i].annaSukunimi() << ";";
+			tiedosto << opiskelijat_[i].annaOsoite() << ";";
+			tiedosto << opiskelijat_[i].annaPuhelinnumero() << ";";
+			tiedosto << opiskelijat_[i].annaOpiskelijanumero() << endl;
+		}
+	}
+	else {
+		cout << "Tiedosto ei aukea!" << endl;
+	}
+	tiedosto.close();
+
+}
+
+int Koulutusohjelma::montakoOpiskelijaaKoulutusohjelmassa()
+{
+	int temp = opiskelijat_.size();
+	return temp;
+}
+
+int Koulutusohjelma::montakoOpettajaaKoulutusohjelmassa()
+{
+	int temp = opettajat_.size();
+	return temp;
+}
+
+
+
 
 //etsintä rutiini
 int Koulutusohjelma::etsiOpettaja() const
@@ -131,7 +200,7 @@ int Koulutusohjelma::etsiOpettaja() const
 			return i;
 		}
 	}
-
+	
 	return -1; /* Ei löytynyt, palauta -1 */
 }
 
@@ -141,12 +210,14 @@ int Koulutusohjelma::etsiOppilas() const
 	cout << "Anna opiskelijanumero ";
 	getline(cin, temp);
 
+	
+
 	for (unsigned int i = 0; i < opiskelijat_.size(); i++) {
 
 		if (temp == opiskelijat_[i].annaOpiskelijanumero())
 			return i;
 	}
-
+	
 	return -1; /* Ei löytynyt, palauta -1 */
 }
 

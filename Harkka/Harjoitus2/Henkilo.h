@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <fstream>
 using std::string;
 
 class Henkilo
@@ -28,6 +29,7 @@ public:
 	//extra
 	void kysyTiedot();
 	void tulosta() const;
+
 
 private:
 	string etunimi_;

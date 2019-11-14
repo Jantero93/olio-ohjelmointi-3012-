@@ -5,6 +5,14 @@
 #include <Windows.h>
 #include "funktiot.h"
 
+/*
+KOULU.CPP KESKEN
+TOIMII THIS FAR
+
+
+
+
+*/
 using namespace std;
 
 int main() {
@@ -103,6 +111,13 @@ int main() {
 			system("pause");
 		}
 			
+		if (valinta == "14") {
+
+		}
+
+		if (valinta == "15") {
+			TAMK.tallennaTiedot();
+		}
 		
 
 	} while (valinta != "0");

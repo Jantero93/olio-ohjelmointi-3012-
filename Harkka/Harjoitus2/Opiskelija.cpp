@@ -47,7 +47,6 @@ void Opiskelija::tulosta() const
 {
 	Henkilo::tulosta(); // kutsutaan kantaluokan tulosta-metodia
 	std::cout << opiskelijanumero_ << " " << std::endl;
-
 }
 
 void Opiskelija::kysyTiedot()
@@ -55,4 +54,6 @@ void Opiskelija::kysyTiedot()
 	Henkilo::kysyTiedot();
 	std::cout << "Anna opiskelijanumero: ";
 	getline(std::cin, opiskelijanumero_);
+
+	
 }
