@@ -137,6 +137,7 @@ void Koulutusohjelma::tallennaOpettajat()
 			tiedosto << opettajat_[i].annaEtunimi() << ";";
 			tiedosto << opettajat_[i].annaSukunimi() << ";";
 			tiedosto << opettajat_[i].annaOsoite() << ";";
+			tiedosto << opettajat_[i].annaPuhelinnumero() << ";";
 			tiedosto << opettajat_[i].annaPalkka() << ";";
 			tiedosto << opettajat_[i].annaTunnus() << ";";
 			tiedosto << opettajat_[i].annaOpetusala() << endl;
@@ -182,6 +183,17 @@ int Koulutusohjelma::montakoOpettajaaKoulutusohjelmassa()
 {
 	int temp = opettajat_.size();
 	return temp;
+}
+
+void Koulutusohjelma::lueOpettajat(string& etunimi, string& sukunimi, string& osoite, string& puhelinnumero, string& palkka, string& tunnus, string& opetusala)
+{
+	opettajat_.push_back(Opettaja(etunimi, sukunimi, osoite, puhelinnumero, palkka, tunnus, opetusala));
+	
+}
+
+void Koulutusohjelma::lueOpiskelijat(string& nimi, string& sukunimi, string& osoite, string& puhelinnumero, string& opiskelijanumero)
+{
+	opiskelijat_.push_back(Opiskelija(nimi, sukunimi, osoite, puhelinnumero, opiskelijanumero));
 }
 
 

@@ -52,9 +52,9 @@ int main() {
 		}
 
 		if (valinta == "4") {
-		clear();
-		TAMK.lisaaKoulutusOhjelmaanOpettaja();
-		system("pause");
+			clear();
+			TAMK.lisaaKoulutusOhjelmaanOpettaja();
+			system("pause");
 		}
 
 		if (valinta == "5") {
@@ -111,12 +111,18 @@ int main() {
 			system("pause");
 		}
 			
-		if (valinta == "14") {
-
+		if (valinta == "14") { /* Hae tiedot filusta */
+			TAMK.lueTiedot();
+			clear();
+			cout << "Tiedot haettu!" << endl;
+			system("pause");
 		}
 
-		if (valinta == "15") {
+		if (valinta == "15") { /* Tallenna tiedot filuun */
 			TAMK.tallennaTiedot();
+			clear();
+			cout << "Tiedot tallennettu!" << endl;
+			system("pause");
 		}
 		
 

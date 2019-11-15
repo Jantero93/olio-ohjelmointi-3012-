@@ -27,11 +27,16 @@ public:
 	void paivitaOpiskelija();
 	void paivitaOpettaja();
 
+	/* Tiedostokäsittelyä */
 	void tallennaOpettajat();
 	void tallennaOppilaat();
 
 	int montakoOpiskelijaaKoulutusohjelmassa();
 	int montakoOpettajaaKoulutusohjelmassa();
+
+	/* Tiedostokäsittelyä */
+	void lueOpettajat(string&, string&, string&, string&, string&, string&, string&);
+	void lueOpiskelijat(string&, string&, string&, string&, string&);
 
 private:
 	int etsiOpettaja() const;
