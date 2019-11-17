@@ -32,11 +32,12 @@ public:
 	void paivitaOpettajanTiedot();
 	void paivitaOppilaanTiedot();
 
+
 	void tallennaTiedot();
 	void lueTiedot();
 
 private:
-	int etsiKoulutusohjelmaTIEDOSTO(string) const;
+	int etsiKoulutusohjelmaTIEDOSTO(string&) const;
 	int etsiKoulutusohjelma() const;	
 	string nimi_;
 	vector <Koulutusohjelma> koulutusohjelmat_;

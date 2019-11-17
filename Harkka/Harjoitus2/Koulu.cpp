@@ -194,8 +194,7 @@ void Koulu::tallennaTiedot()
 }
 
 void Koulu::lueTiedot()
-{
-	
+{	
 	ifstream opettajatFilu;
 	ifstream opiskelijatFilu;
 
@@ -213,7 +212,6 @@ void Koulu::lueTiedot()
 	string opiskelijanumero;
 
 	unsigned int indeksi;
-	int temp;
 
 		opettajatFilu.open("opettajat.csv");
 		if (opettajatFilu.is_open()) {
@@ -230,17 +228,17 @@ void Koulu::lueTiedot()
 				getline(opettajatFilu, tunnus, ';');
 				getline(opettajatFilu, opetusala);
 
-				if (etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma) == -1) {
-					
+				//Onko koulutusohjelma olemassa, palauta indeksi
+				indeksi = etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma);
+
+				if (indeksi == -1) {
 					koulutusohjelmat_.push_back(Koulutusohjelma(koulutusohjelma)); //jos ei koulutusohjelmaa ole, luo sellainen		
-					indeksi = koulutusohjelmat_.size() - 1; // alkiot alkaa nollasta
-					koulutusohjelmat_[indeksi].lueOpettajat(etunimi, sukunimi, osoite, puhnumero, palkka, tunnus, opetusala); //luo sen koulutusohjelman opettajat tiedostosta
-					
+					indeksi = koulutusohjelmat_.size() - 1; // pushaa viimeiseks, indeksi num size - 1
+					koulutusohjelmat_[indeksi].lueOpettajat(etunimi, sukunimi, osoite, puhnumero, palkka, tunnus, opetusala); //luo sen koulutusohjelman opettaja tiedostosta					
 				}
 
 				else {
-					temp = etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma); //hae oikea alkio jos koulutusohjelma on olemassa
-					koulutusohjelmat_[temp].lueOpettajat(etunimi, sukunimi, osoite, puhnumero, palkka, tunnus, opetusala); // jos sellainen on olemassa, luo tiedot
+					koulutusohjelmat_[indeksi].lueOpettajat(etunimi, sukunimi, osoite, puhnumero, palkka, tunnus, opetusala); 
 				}
 			}
 
@@ -250,12 +248,13 @@ void Koulu::lueTiedot()
 		}
 		opettajatFilu.close();
 
-		indeksi = 0;
+		
 		opiskelijatFilu.open("oppilaat.csv");
 
 		if (opiskelijatFilu.is_open()) {
 
 			while (opiskelijatFilu.peek() != EOF) { //lue rivi kerrallaan
+
 				getline(opiskelijatFilu, koulutusohjelma, ';');
 				getline(opiskelijatFilu, etunimi, ';');
 				getline(opiskelijatFilu, sukunimi, ';');
@@ -263,31 +262,26 @@ void Koulu::lueTiedot()
 				getline(opiskelijatFilu, puhnumero, ';');
 				getline(opiskelijatFilu, opiskelijanumero);
 
-				if (etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma) == -1) { //koulutusohjelmaa ei ole, luo
+				//Tarkista onko koulutusohjelmaa olemassa, jos on palauttaa indeksin
+				indeksi = etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma);
 
+				if (indeksi == -1) { //koulutusohjelmaa ei ole, luo
 					koulutusohjelmat_.push_back(Koulutusohjelma(koulutusohjelma));
 					indeksi = koulutusohjelmat_.size() - 1;
-					koulutusohjelmat_[indeksi].lueOpiskelijat(etunimi, sukunimi, osoite, puhnumero, opiskelijanumero);
-					
+					koulutusohjelmat_[indeksi].lueOpiskelijat(etunimi, sukunimi, osoite, puhnumero, opiskelijanumero);					
 				}
 
-				else {
-					temp = etsiKoulutusohjelmaTIEDOSTO(koulutusohjelma);
-					koulutusohjelmat_[temp].lueOpiskelijat(etunimi, sukunimi, osoite, puhnumero, opiskelijanumero);
+				else { //koulutusohjelma on
+					koulutusohjelmat_[indeksi].lueOpiskelijat(etunimi, sukunimi, osoite, puhnumero, opiskelijanumero);
 				}
 			}
 			
 		}
-
 		else {
 			cout << "Tiedosto ei aukea!" << endl;
 		}
 
 }
-
-
-
-
 
 void Koulu::paivitaKoulutusOhjelmanNimi()
 {
@@ -333,10 +327,12 @@ int Koulu::etsiKoulutusohjelma() const
 		}
 	}
 
+	
+
 	return -1; /* Ei löytynyt, palauta -1 */
 }
 
-int Koulu::etsiKoulutusohjelmaTIEDOSTO(string temp) const
+int Koulu::etsiKoulutusohjelmaTIEDOSTO(string& temp) const
 {
 
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {

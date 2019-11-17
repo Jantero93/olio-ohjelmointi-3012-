@@ -1,5 +1,5 @@
 #include "Opettaja.h"
-#include "Tyontekija.h"
+//#include "Tyontekija.h"
 #include <iostream>
 using std::cin;
 using std::cout;

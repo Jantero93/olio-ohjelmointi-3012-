@@ -5,19 +5,16 @@
 #include <Windows.h>
 #include "funktiot.h"
 
-/*
-KOULU.CPP KESKEN
-TOIMII THIS FAR
 
-
-
-
-*/
 using namespace std;
 
 int main() {
 	Koulu TAMK;
 	string valinta;
+
+	/* 
+	Saman nimisiä olioita mahdollista tehdä --> lukee monta kertaa tiedoston niin tuplaoliot
+	*/
 		
 	do {
 		clear();
@@ -123,8 +120,7 @@ int main() {
 			clear();
 			cout << "Tiedot tallennettu!" << endl;
 			system("pause");
-		}
-		
+		}		
 
 	} while (valinta != "0");
 

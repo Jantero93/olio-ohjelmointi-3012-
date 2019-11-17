@@ -1,9 +1,6 @@
 #include "Opiskelija.h"
-#include "Henkilo.h"
+//#include "Henkilo.h"
 #include <iostream>
-
-
-
 
 Opiskelija::Opiskelija() : Henkilo(), opiskelijanumero_()
 {

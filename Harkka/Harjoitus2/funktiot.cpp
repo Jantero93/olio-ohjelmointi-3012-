@@ -24,12 +24,9 @@ string menu() {
 	cout << "13) Paivita opiskelijan tiedot" << endl;
 	cout << "14) Lue tiedot" << endl;
 	cout << "15) Tallenna tiedot" << endl;
-	cout << " 0) Lopeta" << endl << endl;
-		
-	//do {
-		cout << "Anna valintasi: ";
-		getline(cin, valinta);
-//	} while (valinta.length() > 2);  /* Syote max 2 merkkia */	
+	cout << " 0) Lopeta" << endl << endl;	
+	cout << "Anna valintasi: ";
+	getline(cin, valinta);
 
 		if (valinta.length() < 1) {
 			throw std::exception("Liian lyhyt syote");

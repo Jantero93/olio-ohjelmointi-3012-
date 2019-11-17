@@ -1,2 +1,6 @@
 kone;nimi;suku;kone;1;2
-tite;tite;tite;s;s;s
+DAS_KOMPUTER;tite;tite;s;s;s
+RAKSA;oppilasraksa;sukunimiraksa;raksatie;raksatusynumero;0404
+RAKSA;PENTTI;SENTTI;KUJALLAJUNA;020202;tunnus
+RAKSA;uusipena;uusikeijo;uusitie;uusinum;::
+rahis;rahamies;rahakasmies;ankkalinna;112;911
