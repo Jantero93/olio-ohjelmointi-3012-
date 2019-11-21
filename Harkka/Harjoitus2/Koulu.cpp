@@ -71,7 +71,7 @@ void Koulu::lisaaKoulutusOhjelmaanOpettaja()
 
 	else {
 		koulutusohjelmat_[indeksi].lisaaOpettaja();
-		cout << "Lisatty!" << endl;
+		//cout << "Lisatty!" << endl;
 	}
 
 }
@@ -100,6 +100,7 @@ void Koulu::tulostaKoulutusOhjelmanOpiskelijat() const
 
 	else {
 		koulutusohjelmat_[indeksi].tulostaOpiskelija();
+		cout << "Lisatty!" << endl;
 	}
 
 }

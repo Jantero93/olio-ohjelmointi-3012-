@@ -41,6 +41,9 @@ public:
 private:
 	int etsiOpettaja() const;
 	int etsiOppilas() const;
+
+	bool tuplaTarkistus(string tieto, int oppilasVaiOpettaja);
+
 	string nimi_;
 	vector <Opiskelija> opiskelijat_;
 	vector <Opettaja> opettajat_;

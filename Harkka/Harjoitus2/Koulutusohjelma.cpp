@@ -36,17 +36,15 @@ void Koulutusohjelma::asetaNimi(const string & nimi)
 void Koulutusohjelma::lisaaOpettaja()
 {
 	Opettaja temp;
-	temp.kysyTiedot();
-	opettajat_.push_back(temp);
+	temp.kysyTiedot();	
+	opettajat_.push_back(temp);	
 }
 
 void Koulutusohjelma::lisaaOpiskelija()
 {
 	Opiskelija temp;
 	temp.kysyTiedot();
-	opiskelijat_.push_back(temp);
-
-	
+	opiskelijat_.push_back(temp);	
 }
 
 void Koulutusohjelma::tulostaOpettajat() const
@@ -232,4 +230,35 @@ int Koulutusohjelma::etsiOppilas() const
 	
 	return -1; /* Ei löytynyt, palauta -1 */
 }
+
+bool Koulutusohjelma::tuplaTarkistus(string tieto, int oppilasVaiOpettaja) //oppilas 0, opettaja 1
+{
+	enum ihmiset {
+		OPISKELIJA = 0,
+		OPETTAJA = 1
+	};
+
+	if (oppilasVaiOpettaja == 0) {
+
+		for (unsigned int i = 0; i < opiskelijat_.size(); i++) {
+			if (tieto == opiskelijat_[i].annaOpiskelijanumero()) {
+				return true;
+			}
+		}
+
+	}
+
+	if (oppilasVaiOpettaja == 1) {
+
+		for (unsigned int i = 0; i < opettajat_.size(); i++) {
+			if (tieto == opettajat_[i].annaTunnus()) {
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+
 

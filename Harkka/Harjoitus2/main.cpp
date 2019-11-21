@@ -5,12 +5,12 @@
 #include <Windows.h>
 #include "funktiot.h"
 
-
 using namespace std;
 
 int main() {
 	Koulu TAMK;
 	string valinta;
+	bool tiedotHaettu = false; //tiedot voi hakea vain kerran
 
 	/* 
 	Saman nimisiä olioita mahdollista tehdä --> lukee monta kertaa tiedoston niin tuplaoliot
@@ -109,9 +109,17 @@ int main() {
 		}
 			
 		if (valinta == "14") { /* Hae tiedot filusta */
-			TAMK.lueTiedot();
 			clear();
-			cout << "Tiedot haettu!" << endl;
+
+			if (tiedotHaettu == false) {
+				TAMK.lueTiedot();
+				cout << "Tiedot haettu!" << endl;
+				tiedotHaettu = true;
+			}
+			else {
+				cout << "Tiedot on jo haettu!" << endl;
+			}		
+
 			system("pause");
 		}
 
