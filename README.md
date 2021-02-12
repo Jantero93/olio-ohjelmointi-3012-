@@ -1,5 +1,4 @@
-- Person register
-Console application. Person register for schools. Can register students or teachers with variety info.
+Person register for schools. Console application. Can register students or teachers with variety info.
 Data can be saved or loaded from csv file.
 
 - Installation / Get Started
