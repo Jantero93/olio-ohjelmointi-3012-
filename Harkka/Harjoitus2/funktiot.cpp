@@ -28,17 +28,6 @@ string menu() {
 	cout << "Anna valintasi: ";
 	getline(cin, valinta);
 
-		if (valinta.length() < 1) {
-			throw std::exception("Liian lyhyt syote");
-		}
-
-		if (valinta.length() > 2) {
-			throw std::exception("Syotteessa liian paljon merkkeja");
-		}
-
-		if (validisyote(valinta) == false) {
-			throw std::exception("Kirjaimia syotteessa");
-		}
 
 	return valinta;
 }
