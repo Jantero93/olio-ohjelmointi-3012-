@@ -2,12 +2,13 @@
 Console application. Person register for schools. Can register students or teachers with variety info.
 Data can be saved or loaded from csv file.
 
-- Use
-Command to run executable from project root 
-  cd Harkka/Harjoitus2/ && ./test.exe
+- Installation / Get Started
+
+Command to run executable from 
+  **cd olio-ohjelmointi-3012-/Harkka/Harjoitus2/ && ./test.exe**
   
-Or in compile files in folder Harkka/Harjoitus2/ with command
-  g++ -o programName.exe *.cpp
+Or in compile files in folder **olio-ohjelmointi-3012-/Harkka/Harjoitus2/** with command
+  __g++ -o programName.exe *.cpp__
 
 - Usage
 Function to be performed is selected from the main menu. 
